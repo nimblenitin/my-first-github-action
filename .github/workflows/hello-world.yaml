@@ -10,5 +10,5 @@ jobs:
       user_key: ${{ secrets.user_key }}
     steps:
       - name: my-step
-        if:  $user_key == 'abcd'
+        if:  env.user_key == 'abcd'
         run: echo "Hello World! Today is $DAY_OF_WEEK!"
