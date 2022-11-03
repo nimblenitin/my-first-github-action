@@ -2,10 +2,12 @@ name: hello-world
 on: push
 env:
   DAY_OF_WEEK: Monday
-  user_key: ${{ secrets.user_key }}
+  
 jobs:
   my-job:
     runs-on: ubuntu-latest
+    env: 
+      user_key: ${{ secrets.user_key }}
     steps:
       - name: my-step
         if:  $user_key == 'abcd'
