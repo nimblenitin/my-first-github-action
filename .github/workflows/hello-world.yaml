@@ -1,11 +1,10 @@
 name: hello-world
 on: push
+env:
+  DAY_OF_WEEK: Monday
 jobs:
   my-job:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello world Today is Monday!"
+        run: echo "Hello World! Today is $DAY_OF_WEEK!"
