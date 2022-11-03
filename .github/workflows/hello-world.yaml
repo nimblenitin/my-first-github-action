@@ -12,3 +12,4 @@ jobs:
       - name: my-step
         if:  env.user_key == 'abcd'
         run: echo "Hello World! Today is $DAY_OF_WEEK!"
+        
